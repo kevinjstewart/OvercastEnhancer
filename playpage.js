@@ -43,11 +43,11 @@ $("back30").css({
 });
 
 $("#back30").click(function() {
- $("#audioplayer").currentTime -= 30;
+   $("#audioplayer").get(0).currentTime -= 30;
 });
 
 $("#forward30").click(function() {
-   $("#audioplayer").currentTime += 30;
+   $("#audioplayer").get(0).currentTime += 30;
 });
 
 
