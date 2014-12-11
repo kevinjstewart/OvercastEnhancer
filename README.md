@@ -5,4 +5,14 @@ Chrome extension to add a couple of features to the Overcast webapp for listenin
 
 Not affiliated with Marco Arment or Overcast in any way.
 
-**TODO: List features**
+**Features**
+
+* Skip forward and backward 30 seconds
+
+**TODO:**
+
+* Make skip intervals user-editable
+
+* Filter unplayed podcasts at homepage
+
+* Choose icons and cleanup project
