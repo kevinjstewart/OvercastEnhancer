@@ -30,5 +30,14 @@ style.type = 'text/css';
 style.href = chrome.extension.getURL('style.css');
 (document.head||document.documentElement).appendChild(style);
 
-//
+$( "#audioplayer" ).after( '<a class="ocborderedbutton centertext" id="back30">&#8634;</a>' );
+$( "#audioplayer" ).after( '<a class="ocborderedbutton" id="forward30">&#8635;</a>' );
+
+$("#forward30").css({
+ "float":"right"
+});
+
+$("back30").css({
+ "float":"left"
+});
 
