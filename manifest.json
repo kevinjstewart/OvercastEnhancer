@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "Overcast Enhancer",
+  "description": "This extension demonstrates a browser action with kittens.",
+  "version": "1.0",
+
+  "content_scripts": [
+    {
+      "matches": ["http://www.google.com/*"],
+      "css": ["style.css"],
+      "js": ["jquery.js", "playpage.js"]
+    }
+  ],
+
+  "permissions": [
+    "https://overcast.fm/"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}
