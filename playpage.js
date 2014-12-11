@@ -19,3 +19,16 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
  */
+
+/**
+ * Apply CSS from style.css into page
+ * @type {HTMLElement}
+ */
+var style = document.createElement('link');
+style.rel = 'stylesheet';
+style.type = 'text/css';
+style.href = chrome.extension.getURL('style.css');
+(document.head||document.documentElement).appendChild(style);
+
+
+

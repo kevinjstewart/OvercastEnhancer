@@ -17,6 +17,10 @@
     }
   ],
 
+  "web_accessible_resources": [
+    "style.css"
+  ],
+
 
   "permissions": [
     "https://overcast.fm/"
