@@ -20,18 +20,19 @@
  THE SOFTWARE.
  */
 
-/**
- * Apply CSS from style.css into page
- * @type {HTMLElement}
- */
+var SKIP_INTERVAL = 30;
+
+//Convert this to JQuery one day if possible
 var style = document.createElement('link');
 style.rel = 'stylesheet';
 style.type = 'text/css';
 style.href = chrome.extension.getURL('style.css');
 (document.head||document.documentElement).appendChild(style);
 
-$( "#audioplayer" ).after( '<a class="ocborderedbutton centertext" id="back30">&#8634;</a>' );
-$( "#audioplayer" ).after( '<a class="ocborderedbutton" id="forward30">&#8635;</a>' );
+var player = $("#audioplayer");
+
+player.after( '<a class="ocborderedbutton centertext" id="back30">&#8634;</a>' );
+player.after( '<a class="ocborderedbutton" id="forward30">&#8635;</a>' );
 
 $("#forward30").css({
  "float":"right"
@@ -40,4 +41,13 @@ $("#forward30").css({
 $("back30").css({
  "float":"left"
 });
+
+$("#back30").click(function() {
+   player.currentTime -= SKIP_INTERVAL;
+});
+
+$("back30").click(function() {
+   player.currentTime += SKIP_INTERVAL;
+});
+
 
