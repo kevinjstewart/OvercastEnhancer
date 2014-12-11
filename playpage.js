@@ -43,11 +43,11 @@ $("back30").css({
 });
 
 $("#back30").click(function() {
-   player.currentTime -= SKIP_INTERVAL;
+ $("#audioplayer").currentTime -= 30;
 });
 
-$("back30").click(function() {
-   player.currentTime += SKIP_INTERVAL;
+$("#forward30").click(function() {
+   $("#audioplayer").currentTime += 30;
 });
 
 
