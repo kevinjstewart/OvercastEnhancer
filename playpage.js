@@ -21,6 +21,7 @@
  */
 
 var SKIP_INTERVAL = 30;
+var audioplayer = $("audioplayer").get(0);
 
 //Convert this to JQuery one day if possible
 var style = document.createElement('link');
@@ -35,19 +36,28 @@ player.after( '<a class="ocborderedbutton centertext" id="back30">&#8634;</a>' )
 player.after( '<a class="ocborderedbutton" id="forward30">&#8635;</a>' );
 
 $("#forward30").css({
- "float":"right"
+    "float":"right"
 });
 
 $("back30").css({
- "float":"left"
+    "float":"left"
 });
 
 $("#back30").click(function() {
-   $("#audioplayer").get(0).currentTime -= 30;
+    if (audioplayer.currentTime < 0) {
+        audioplayer.currentTime -= 30;
+    } else {
+        audioplayer.currentTime = 0;
+    }
 });
 
 $("#forward30").click(function() {
-   $("#audioplayer").get(0).currentTime += 30;
+    if (audioplayer.currentTime < audioplayer.duration - 30) {
+        audioplayer.currentTime += 30;
+    }
+    else {
+        audioplayer.currentTime = audioplayer.duration;
+    }
 });
 
 
